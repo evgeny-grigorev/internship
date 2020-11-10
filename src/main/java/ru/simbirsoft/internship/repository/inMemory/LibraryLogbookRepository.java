@@ -5,7 +5,6 @@ import org.springframework.stereotype.Repository;
 import ru.simbirsoft.internship.dto.LibraryLogbook;
 import ru.simbirsoft.internship.utils.ValidationUtil;
 
-import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,8 +19,6 @@ public class LibraryLogbookRepository {
     private PersonRepository personRepository;
 
     public List<LibraryLogbook> getAll() {
-        libraryLogbookList.add(new LibraryLogbook(personRepository.getByLastName("Collins").get(0),
-                bookRepository.getByAuthor("Duma").get(0), ZonedDateTime.now()));
         return libraryLogbookList;
     }
 

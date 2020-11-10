@@ -22,9 +22,9 @@ public class PersonRepository {
 
     static {
         personList = Stream.of(
-                new Person("Uilams", "Robby", LocalDate.parse("1974-02-13")),
-                new Person("Collins", "Fil", LocalDate.parse("1951-01-30")),
-                new Person("Grol", "Deiv", LocalDate.parse("1969-01-14"))
+                new Person("Uilams", "Robby", "Robby", LocalDate.parse("1974-02-13")),
+                new Person("Collins", "Fil", "Fil", LocalDate.parse("1951-01-30")),
+                new Person("Grol", "Deiv", "Deiv", LocalDate.parse("1969-01-14"))
         ).collect(Collectors.toList());
     }
 

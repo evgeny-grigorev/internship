@@ -1,10 +1,16 @@
 package ru.simbirsoft.internship.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.validation.constraints.NotNull;
 import java.time.ZonedDateTime;
 
+@AllArgsConstructor
+@Getter
+@Setter
 public class LibraryLogbook {
     @NotNull
     private Person person;
@@ -13,45 +19,6 @@ public class LibraryLogbook {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss.SSSXXX")
     @NotNull
     private ZonedDateTime zonedDateTime;
-
-    public LibraryLogbook(Person person, Book book, ZonedDateTime zonedDateTime) {
-        this.person = person;
-        this.book = book;
-        this.zonedDateTime = zonedDateTime;
-    }
-
-    public Person getPerson() {
-        return person;
-    }
-
-    public void setPerson(Person person) {
-        this.person = person;
-    }
-
-    public Book getBook() {
-        return book;
-    }
-
-    public void setBook(Book book) {
-        this.book = book;
-    }
-
-    public ZonedDateTime getZonedDateTime() {
-        return zonedDateTime;
-    }
-
-    public void setZonedDateTime(ZonedDateTime zonedDateTime) {
-        this.zonedDateTime = zonedDateTime;
-    }
-
-    @Override
-    public String toString() {
-        return "LibraryLogbook{" +
-                "person=" + person +
-                ", book=" + book +
-                ", zonedDateTime=" + zonedDateTime +
-                '}';
-    }
 
     @Override
     public boolean equals(Object o) {
