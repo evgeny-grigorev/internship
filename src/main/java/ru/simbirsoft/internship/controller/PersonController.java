@@ -1,12 +1,10 @@
 package ru.simbirsoft.internship.controller;
 
 import com.fasterxml.jackson.annotation.JsonView;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import ru.simbirsoft.internship.dto.Person;
-import ru.simbirsoft.internship.repository.inMemory.PersonRepository;
+import ru.simbirsoft.internship.repository.in_memory.PersonRepository;
 import ru.simbirsoft.internship.utils.View;
 
 import javax.validation.constraints.NotNull;
@@ -15,7 +13,6 @@ import java.util.List;
 @RestController
 @RequestMapping(path = "/rest/persons")
 public class PersonController {
-    private static final Logger log = LoggerFactory.getLogger(PersonController.class);
 
     @Autowired
     private PersonRepository personRepository;

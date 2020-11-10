@@ -1,7 +1,5 @@
-package ru.simbirsoft.internship.repository.inMemory;
+package ru.simbirsoft.internship.repository.in_memory;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import ru.simbirsoft.internship.dto.LibraryLogbook;
@@ -17,7 +15,6 @@ import java.util.stream.Stream;
 @Repository
 public class PersonRepository {
 
-    private static final Logger log = LoggerFactory.getLogger(PersonRepository.class);
     private static List<Person> personList;
 
     static {

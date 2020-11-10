@@ -3,7 +3,7 @@ package ru.simbirsoft.internship.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import ru.simbirsoft.internship.dto.LibraryLogbook;
-import ru.simbirsoft.internship.repository.inMemory.LibraryLogbookRepository;
+import ru.simbirsoft.internship.repository.in_memory.LibraryLogbookRepository;
 
 import javax.validation.constraints.NotNull;
 import java.util.List;

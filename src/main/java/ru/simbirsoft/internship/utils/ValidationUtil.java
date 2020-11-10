@@ -12,7 +12,10 @@ import java.util.List;
 public class ValidationUtil {
     private static final Logger log = LoggerFactory.getLogger(ValidationUtil.class);
 
-    public static void checkInList(List list, Object object) {
+    private ValidationUtil() {
+    }
+
+    public static <T> void checkInList(List<T> list, Object object) {
         if (!list.contains(object)) {
             String message = "No " + object.getClass().getName() + " " + object + " in list";
             log.error(message);
@@ -26,7 +29,10 @@ public class ValidationUtil {
                     .anyMatch(libraryLogbook -> libraryLogbook.getBook().equals(object))) {
                 return object;
             }
-        } else if (object instanceof Person) {
+        } else {
+            if (!(object instanceof Person)) {
+                return null;
+            }
             if (libraryLogbookList.stream()
                     .anyMatch(libraryLogbook -> libraryLogbook.getPerson().equals(object))) {
                 return object;

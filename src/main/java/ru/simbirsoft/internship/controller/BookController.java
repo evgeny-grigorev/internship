@@ -1,12 +1,10 @@
 package ru.simbirsoft.internship.controller;
 
 import com.fasterxml.jackson.annotation.JsonView;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import ru.simbirsoft.internship.dto.Book;
-import ru.simbirsoft.internship.repository.inMemory.BookRepository;
+import ru.simbirsoft.internship.repository.in_memory.BookRepository;
 import ru.simbirsoft.internship.utils.View;
 
 import javax.validation.constraints.NotNull;
@@ -15,7 +13,6 @@ import java.util.List;
 @RestController
 @RequestMapping(path = "/rest/books")
 public class BookController {
-    private static final Logger log = LoggerFactory.getLogger(BookController.class);
 
     @Autowired
     private BookRepository bookRepository;

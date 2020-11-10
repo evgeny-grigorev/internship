@@ -1,4 +1,4 @@
-package ru.simbirsoft.internship.repository.inMemory;
+package ru.simbirsoft.internship.repository.in_memory;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
